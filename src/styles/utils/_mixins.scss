@@ -1,6 +1,36 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
+@mixin hover {
+  transition: all 0.3s;
   &:hover {
-    #{$_property}: $_toValue;
+    transform: scale(1.05);
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin gridDesktop {
+  justify-content: center;
+  grid-template-columns: repeat(12, 80px);
+  gap: 20px;
+}
+
+@mixin image {
+  @media (max-width: 1279px) {
+    @content;
   }
 }

@@ -1,0 +1,17 @@
+.imagination {
+  width: 100%;
+  height: 267px;
+  box-sizing: border-box;
+  object-fit: cover;
+  object-position: center;
+  @include hover;
+
+  @include tablet {
+    height: 500px;
+  }
+
+  @include desktop {
+    width: 580px;
+    height: 451px;
+  }
+}

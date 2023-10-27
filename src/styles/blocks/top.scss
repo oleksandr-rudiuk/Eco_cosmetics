@@ -1,0 +1,18 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px 20px;
+
+  @include tablet {
+    padding: 23px 27px 30px ;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

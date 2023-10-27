@@ -1,0 +1,178 @@
+.shop {
+  @include tablet {
+    padding: 130px 27px;
+  }
+
+  @include desktop {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, 80px);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    padding: 200px 50px;
+  }
+
+  @include large {
+    padding: 200px 130px;
+  }
+
+  &__aside {
+    display: none;
+
+    @include desktop {
+      grid-column: 1 / 2;
+      grid-row: 1 / 4;
+      display: block;
+      width: 25px;
+      height: 252px;
+    }
+
+    &--word {
+      display: block;
+      position: relative;
+      width: 70px;
+      top: 96px;
+      right: 100px;
+      color: rgba(52, 79, 16, 0.5);
+      text-align: center;
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      transform: rotate(270deg);
+
+      &::after {
+        display: block;
+        position: relative;
+        bottom: 9px;
+        right: 40px;
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: rgba(52, 79, 16, 0.5);
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include desktop {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2;
+      margin-bottom: 10px;
+      text-align: start;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    padding: $smartPadding;
+
+    @include tablet {
+      justify-content: start;
+      padding: 0;
+    }
+
+    @include desktop {
+      grid-column: 2 / 7;
+      grid-row: 2 / 3;
+      padding: 0 80px 0 0;
+    }
+
+    &--link {
+      color: $lightGreyColor;
+      text-decoration: none;
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+        color: $menuColor;
+        &::after {
+          display: block;
+          position: relative;
+          top: 10px;
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: $menuColor;
+        }
+      }
+
+      @include tablet {
+        &:not(:first-child) {
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+
+  &__general {
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      grid-column: 2 / -1;
+      grid-row: 3 / 4;
+    }
+    
+    &--productOil {
+      margin-bottom: 30px;
+
+      @include tablet {
+        width: 44.5%;
+      }
+
+      @include desktop {
+        width: 530px;
+      }
+    }
+
+    &--productUbtan {
+      display: none;
+
+      @include tablet {
+        display: block;
+        width: 44.5%;
+      }
+
+      @include desktop {
+        width: 530px;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 60px;
+    margin: 0 20px;
+    
+    @include tablet {
+      width: 280px;
+      height: 60px;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      grid-column: 5 / 9;
+      grid-row: 4 / 5;
+      margin: 0;
+      margin-left: 40px;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.brand {
+  padding: $smartPadding;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $tabletPadding;
+  }
+
+  @include desktop {
+    display: grid;
+    padding: $desktopPadding;
+    @include gridDesktop;
+  }
+
+  @include large {
+    padding: $largePadding;
+  }
+
+  &__aside {
+    display: none;
+
+    @include desktop {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      display: block;
+      width: 25px;
+      height: 252px;
+    }
+
+    &--word {
+      display: block;
+      position: relative;
+      width: 192px;
+      top: 96px;
+      right: 100px;
+      color: rgba(52, 79, 16, 0.5);
+      text-align: center;
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      transform: rotate(270deg);
+
+      &::after {
+        display: block;
+        position: relative;
+        bottom: 9px;
+        right: 40px;
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: rgba(52, 79, 16, 0.5);
+      }
+    }
+  }
+
+  &__general {
+
+    @include tablet {
+      width: 342px;
+    }
+
+    @include desktop {
+      grid-column: 2 / 6;
+    }
+
+    &--title {
+      margin-bottom: 10px;
+
+      @include desktop {
+        margin-bottom: 40px;
+      }
+    }
+
+    &--text1 {
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 30px;
+    
+      @include tablet {
+        width: 342px;
+        height: 216px;
+      }
+
+      @include desktop {
+        width: 380px;
+        height: 192px;
+        font-size: 16px;
+      }
+    }
+
+    &--text2 {
+      display: none;
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+
+      @include desktop {
+        display: block;
+        margin-bottom: 40px;
+      }
+    }
+
+    &--button {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__picture {
+    display: none;
+
+    @include tablet {
+      display: block;
+      width: 342px;
+      height: 321px;
+      background-image: url(./pictures/brand_candel.jpg);
+      @include hover;
+    }
+
+    @include desktop {
+      grid-column: 7 / 11;
+      display: block;
+      width: 380px;
+      height: 529px;
+    }
+  }
+
+  &__smallPicture {
+    display: none;
+
+    @include desktop {
+      grid-column: 11 / -1;
+      display: block;
+      width: 180px;
+      height: 430px;
+      margin-top: 100px;
+      background-image: url(./pictures/brand_half.jpg);
+      @include hover;
+    }
+  }
+}

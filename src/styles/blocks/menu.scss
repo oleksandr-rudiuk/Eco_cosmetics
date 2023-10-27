@@ -1,0 +1,57 @@
+.menu {
+  background-color: $menuColor;
+  width: 100%;
+  height: 568px;
+
+  @include tablet {
+    height: 1024px;
+  }
+  
+  @include desktop {
+    display: none;
+  }
+
+  &__menuTop {
+    padding: 15px 20px 45px;
+
+    @include tablet {
+      padding: 28px 27px 100px;
+    }
+
+    &--crest {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $smartPadding;
+    
+    @include tablet {
+      padding: $tabletPadding;
+    }
+
+    &--link {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: $mainColor;
+      text-align: center;
+      font-family: Poppins, sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $lightGreyColor;
+      margin-bottom: 30px;
+
+      @include tablet {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

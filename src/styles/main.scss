@@ -1,7 +1,83 @@
 @import "utils";
-@import "fonts";
 @import "typography";
+@import "./blocks/ayurvedicBottomBlock.scss";
+@import "./blocks/button.scss";
+@import "./blocks/field.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/header.scss";
+@import "./blocks/deskTop.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/page.scss";
+@import "./blocks/powderblock.scss";
+@import "./blocks/product.scss";
+@import "./blocks/productCard.scss";
+@import "./blocks/top.scss";
+@import "./blocks/imagination.scss";
+@import "./blocks/underlineButton.scss";
+@import "./sections/ayurvedic.scss";
+@import "./sections/brand.scss";
+@import "./sections/contacts.scss";
+@import "./sections/creators.scss";
+@import "./sections/shop.scss";
 
 body {
-  background: $c-gray;
+  background: $mainColor;
+}
+
+h1 {
+  color: $menuColor;
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+
+  @include tablet {
+    font-size: 36px;
+  }
+
+  @include desktop {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  color: $titleColor;
+  line-height: 150%;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: $titleColor;
+}
+
+h4 {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: $menuColor;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
 }

@@ -1,0 +1,31 @@
+.underlineButton {
+  width: 90px;
+
+  &__link {
+    display: flex;
+    width: max-content;
+    height: 31px;
+    align-items: center;
+    text-decoration: none;
+    color: $titleColor;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    &:hover {
+      cursor: pointer;
+      &::after {
+        display: block;
+        position: relative;
+        top: 12px;
+        right: 95px;
+        content: "";
+        width: 90px;
+        height: 1px;
+        background-color: $titleColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.deskTop {
+  display: none;
+
+  @include desktop {
+    display: grid;
+    @include gridDesktop;
+    padding: 52px 0 92px;
+  }
+
+  &__logowitch {
+    grid-column: 1 / 5;
+    display: flex;
+    align-items: center;
+
+    &--img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &--name {
+      display: flex;
+      height: 50px;
+      align-items: center;
+      text-align: center;
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      margin-left: 2px;
+    }
+  }
+  
+  &__shopLink {
+    grid-column: 7 / 8;
+    text-decoration: none;
+    color: $titleColor;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: capitalize;
+    @include hover;
+    
+  }
+
+  &__contactLink {
+    grid-column: 8 / 9;
+    text-decoration: none;
+    color: $titleColor;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: capitalize;
+    @include hover;
+  }
+
+  &__aboutLink {
+    grid-column: 9 / 10;
+    text-decoration: none;
+    color: $titleColor;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: capitalize;
+    @include hover;
+  }
+
+  &__icon {
+    grid-column: -1;
+  }
+}
